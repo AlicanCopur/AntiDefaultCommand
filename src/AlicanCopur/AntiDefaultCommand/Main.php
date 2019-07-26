@@ -32,7 +32,7 @@ class Main extends PluginBase {
 		$this->removeDefaultCommands();
 	}
 	private function removeDefaultCommands(){
-		$map = $this->server->getCommandMap();
+		$map = $this->getServer()->getCommandMap();
 		foreach($this->commands as $cmdname){
 			$cmd = $map->getCommand($cmdname);
 			if($cmd != null){
