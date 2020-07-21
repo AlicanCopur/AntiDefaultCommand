@@ -1,6 +1,6 @@
 name: AntiDefaultCommand
 main: AlicanCopur\AntiDefaultCommand\Main
 author: AlicanCopur
-api: 3.1.8
+api: 3.14.1
 version: 1.0.A
 website: www.hashcubenw.com
