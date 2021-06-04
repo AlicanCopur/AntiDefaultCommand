@@ -12,7 +12,7 @@
 *
 *@version 1.0
 *@author AlicanCopur
-*@copyright HashCube Network© | 2015 - 2020
+*@copyright HashCube Network© | 2015 - 2021
 *@license Açık yazılım lisansı altındadır. Tüm hakları saklıdır. 
 */            
 
@@ -24,13 +24,15 @@ use pocketmine\utils\Config;
 class Main extends PluginBase {
 	
 	private $commands;
+	
 	public function onEnable(){
-    	@mkdir($this->getDataFolder());
+    		@mkdir($this->getDataFolder());
 		$this->saveResource("Config.yml");
 		$cfg = new Config($this->getDataFolder()."Config.yml", Config::YAML);
 		$this->commands = $cfg->get("Commands");
 		$this->removeDefaultCommands();
 	}
+	
 	private function removeDefaultCommands(){
 		$map = $this->getServer()->getCommandMap();
 		foreach($this->commands as $cmdname){
